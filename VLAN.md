@@ -7,6 +7,13 @@ Switch(config)# vlan <VLAN_ID>
 Switch(config-vlan)# name <NAME>
 ```
 
+Example:
+
+```txt
+Switch(config)# vlan 10
+Switch(config-vlan)# name ACCOUNTING
+```
+
 Verify:
 
 ```txt
