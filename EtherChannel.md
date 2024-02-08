@@ -9,7 +9,7 @@ Make sure all links are the same.
 This is an open standard.
 You should use this.
 
-Both sides are configures identically
+Both sides are configured identically
 
 ```txt
 Switch0(config)# interface range fa0/1-2
@@ -26,7 +26,7 @@ Switch1(config-range-if)# channel-group 1 mode active
 This is Cisco proprietary.
 You should probably use LACP
 
-Both sides are configures identically
+Both sides are configured identically
 
 ```txt
 Switch0(config)# interface range fa0/1-2
@@ -43,7 +43,7 @@ Switch1(config-range-if)# channel-group 1 mode desirable
 You could also skip the negotiations and manually create an EtherChannel,
 but that is not recommended because you lose the ability to detect disconnected cables.
 
-Both sides are configures identically
+Both sides are configured identically
 
 ```txt
 Switch0(config)# interface range fa0/1-2
