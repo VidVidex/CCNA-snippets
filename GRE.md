@@ -19,10 +19,10 @@ R1(config-if)# tunnel destination 200.5.4.5
 ```
 
 ```txt
-R2(config)# interface Tunnel0
-R2(config-if)# ip address 192.168.1.2 255.255.255.0
-R2(config-if)# tunnel source gig0/1
-R2(config-if)# tunnel destination 200.5.4.1
+R3(config)# interface Tunnel0
+R3(config-if)# ip address 192.168.1.2 255.255.255.0
+R3(config-if)# tunnel source gig0/1
+R3(config-if)# tunnel destination 200.5.4.1
 ```
 
 ## Routing
@@ -46,9 +46,9 @@ R1(config)# router ospf 1
 R1(config-router)# network 10.0.1.0 0.0.0.255 area 0
 R1(config-router)# network 192.168.1.0 0.0.0.255 area 0
 
-R2(config)# router ospf 1
-R2(config-router)# network 10.0.2.0 0.0.0.255 area 0
-R2(config-router)# network 192.168.1.0 0.0.0.255 area 0
+R3(config)# router ospf 1
+R3(config-router)# network 10.0.2.0 0.0.0.255 area 0
+R3(config-router)# network 192.168.1.0 0.0.0.255 area 0
 ```
 
 ## Verify
