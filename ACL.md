@@ -29,8 +29,8 @@ Since we're using standard ACL we can only filter based on source IP, so we need
 1. Create the ALC
 
     ```txt
-    R2(config)# access list 1 permit 10.0.1.0 0.0.0.255
-    R2(config)# access list 1 deny any <-- Implicit deny any, already exists
+    R2(config)# access-list 1 permit 10.0.1.0 0.0.0.255
+    R2(config)# access-list 1 deny any <-- Implicit deny any, already exists
     ```
 
 2. Place it on an interface (outbound on `R2` interface `g0/1`).
@@ -48,7 +48,7 @@ Since we're using standard ACL we can only filter based on source IP, so we need
 1. Create the ALC
 
     ```txt
-    R2(config)# ip access list standard ALLOW_ONLY_PC0
+    R2(config)# ip access-list standard ALLOW_ONLY_PC0
     R2(config-std-nacl)# permit 10.0.1.0 0.0.0.255
     R2(config-std-nacl)# deny any        <-- Implicit deny any, already exists
     ```
@@ -75,7 +75,7 @@ Example: Clients from network `10.0.1.0/24` are not permitted to telnet to `10.0
 
     ```txt
     R2(config)# access-list 100 deny tcp 10.0.1.0 0.0.0.255 10.0.4.0 0.0.0.255 eq telnet
-    R2(config)# access list 100 permit any any <-- Avoid blocking everything with the implicit deny any
+    R2(config)# access-list 100 permit any any <-- Avoid blocking everything with the implicit deny any
     ```
 
 2. Place it on an interface (inbound on `R2` interface `g0/0`).
