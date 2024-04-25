@@ -7,7 +7,7 @@
 ```txt
 
 # Exclude addresses that you want to assign statically (from - to)
-Router0(config)# ip excluded-address 192.168.1.1 192.168.1.20
+Router0(config)# ip dhcp excluded-address 192.168.1.1 192.168.1.20
 
 # Create a pool, you can name it anything you want
 Router0(config)# ip dhcp pool POOL_NAME
