@@ -12,7 +12,7 @@ Router0(config)# ip dhcp excluded-address 192.168.1.1 192.168.1.20
 # Create a pool, you can name it anything you want
 Router0(config)# ip dhcp pool POOL_NAME
 
-# Set configuration options, networka and default-router are mandatory 
+# Set configuration options, network and default-router are mandatory 
 Router0(dhcp-config)# network 192.168.1.0 255.255.255.0
 Router0(dhcp-config)# default-router 192.168.1.1
 Router0(dhcp-config)# dns-server 8.8.8.8
